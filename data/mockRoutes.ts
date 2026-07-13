@@ -1,0 +1,55 @@
+import type { Route } from "@/types";
+
+export const mockRoutes: Route[] = [
+  {
+    id: "route-1",
+    name: "Dasmarinas Loop",
+    origin: "Robinsons Dasmarinas",
+    destination: "DBB-C City Terminal",
+    estimatedTime: "28 min",
+    farePoints: 24,
+    activeBuses: 8,
+    nextBusEta: "4 min",
+    status: "Active",
+    stops: [
+      { id: "s1", name: "Robinsons Dasmarinas", order: 1, eta: "Now", coordinates: { latitude: 14.299, longitude: 120.958 } },
+      { id: "s2", name: "Congressional Ave", order: 2, eta: "6 min", coordinates: { latitude: 14.314, longitude: 120.953 } },
+      { id: "s3", name: "La Salle Dasmarinas", order: 3, eta: "13 min", coordinates: { latitude: 14.327, longitude: 120.943 } },
+      { id: "s4", name: "DBB-C City Terminal", order: 4, eta: "28 min", coordinates: { latitude: 14.331, longitude: 120.936 } },
+    ],
+  },
+  {
+    id: "route-2",
+    name: "Imus - Alabang Express",
+    origin: "Lumina Point Imus",
+    destination: "Festival Mall Alabang",
+    estimatedTime: "48 min",
+    farePoints: 58,
+    activeBuses: 5,
+    nextBusEta: "9 min",
+    status: "Active",
+    stops: [
+      { id: "s5", name: "Lumina Point Imus", order: 1, eta: "Now", coordinates: { latitude: 14.406, longitude: 120.941 } },
+      { id: "s6", name: "Aguinaldo Highway", order: 2, eta: "11 min", coordinates: { latitude: 14.416, longitude: 120.94 } },
+      { id: "s7", name: "Daang Hari", order: 3, eta: "27 min", coordinates: { latitude: 14.389, longitude: 121.004 } },
+      { id: "s8", name: "Festival Mall Alabang", order: 4, eta: "48 min", coordinates: { latitude: 14.417, longitude: 121.043 } },
+    ],
+  },
+  {
+    id: "route-3",
+    name: "Bacoor Coastal Connector",
+    origin: "Bacoor Government Center",
+    destination: "PITX",
+    estimatedTime: "36 min",
+    farePoints: 42,
+    activeBuses: 3,
+    nextBusEta: "14 min",
+    status: "Delayed",
+    stops: [
+      { id: "s9", name: "Bacoor Government Center", order: 1, eta: "Now", coordinates: { latitude: 14.461, longitude: 120.966 } },
+      { id: "s10", name: "Zapote", order: 2, eta: "12 min", coordinates: { latitude: 14.477, longitude: 120.978 } },
+      { id: "s11", name: "Coastal Mall", order: 3, eta: "27 min", coordinates: { latitude: 14.533, longitude: 120.992 } },
+      { id: "s12", name: "PITX", order: 4, eta: "36 min", coordinates: { latitude: 14.509, longitude: 120.992 } },
+    ],
+  },
+];

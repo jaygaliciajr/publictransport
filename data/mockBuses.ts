@@ -1,0 +1,40 @@
+import type { Bus } from "@/types";
+
+export const mockBuses: Bus[] = [
+  {
+    id: "bus-101",
+    plateNumber: "E-MINI 101",
+    routeId: "route-1",
+    currentStop: "Robinsons Dasmarinas",
+    nextStop: "Congressional Ave",
+    etaMinutes: 4,
+    capacityStatus: "Light",
+    hasWifi: true,
+    hasCctv: true,
+    isElectric: true,
+  },
+  {
+    id: "bus-204",
+    plateNumber: "E-MINI 204",
+    routeId: "route-2",
+    currentStop: "Aguinaldo Highway",
+    nextStop: "Daang Hari",
+    etaMinutes: 9,
+    capacityStatus: "Moderate",
+    hasWifi: true,
+    hasCctv: true,
+    isElectric: true,
+  },
+  {
+    id: "bus-309",
+    plateNumber: "E-MINI 309",
+    routeId: "route-3",
+    currentStop: "Zapote",
+    nextStop: "Coastal Mall",
+    etaMinutes: 14,
+    capacityStatus: "Full",
+    hasWifi: false,
+    hasCctv: true,
+    isElectric: true,
+  },
+];

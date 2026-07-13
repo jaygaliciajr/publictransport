@@ -1,19 +1,40 @@
-const tintColorLight = '#2f95dc';
-const tintColorDark = '#fff';
+export const colors = {
+  primary: "#28BDBF",
+  secondary: "#30C4F3",
+  background: "#F5FBFC",
+  surface: "#FFFFFF",
+  surfaceElevated: "#FBFEFF",
+  dark: "#101828",
+  ink: "#122029",
+  muted: "#667085",
+  softMuted: "#98A2B3",
+  faint: "#E6F8F9",
+  faintBlue: "#EAF8FF",
+  line: "#D9E8EA",
+  lineStrong: "#C5D7DB",
+  success: "#22C55E",
+  warning: "#F59E0B",
+  error: "#EF4444",
+  info: "#0EA5E9",
+  pressed: "#1EA8AA",
+  shadow: "rgba(16, 24, 40, 0.09)",
+  bronze: "#9A5B32",
+  silver: "#8B98A8",
+  gold: "#D69D16",
+  platinum: "#39A7D8",
+  diamond: "#8B5CF6",
+};
 
-export default {
-  light: {
-    text: '#000',
-    background: '#fff',
-    tint: tintColorLight,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#fff',
-    background: '#000',
-    tint: tintColorDark,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorDark,
-  },
+export const gradients = {
+  brand: [colors.primary, colors.secondary] as const,
+  darkBrand: ["#0F8F91", "#1BA8E2"] as const,
+  soft: ["#F6FCFD", "#EAF9FB"] as const,
+  map: ["#EAF8FF", "#D8FBF8"] as const,
+  premium: ["#102A43", "#0D8E9B"] as const,
+  card: ["#FFFFFF", "#F2FBFD"] as const,
+  bronze: ["#6F3E22", "#C07A43"] as const,
+  silver: ["#667085", "#D7DEE8"] as const,
+  gold: ["#B7791F", "#F6D365"] as const,
+  platinum: ["#248BB9", "#8CE2FF"] as const,
+  diamond: ["#6D28D9", "#C084FC"] as const,
 };

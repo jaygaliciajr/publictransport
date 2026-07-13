@@ -1,40 +1,15 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { Text, View } from '@/components/Themed';
+import { AppShell } from "@/components/navigation/app-shell";
+import { ScreenHeader } from "@/components/navigation/screen-header";
+import { SecondaryButton } from "@/components/ui/secondary-button";
+import { ErrorState } from "@/components/ui/state-views";
+import { router } from "expo-router";
 
 export default function NotFoundScreen() {
   return (
-    <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>This screen doesn't exist.</Text>
-
-        <Link href="/" style={styles.link}>
-          <Text style={styles.linkText}>Go to home screen!</Text>
-        </Link>
-      </View>
-    </>
+    <AppShell>
+      <ScreenHeader title="Not found" showBack />
+      <ErrorState title="This screen is not available" body="The link may be outdated or still planned for a later phase." />
+      <SecondaryButton label="Go home" onPress={() => router.replace("/home")} />
+    </AppShell>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
-  },
-});
